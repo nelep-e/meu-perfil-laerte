@@ -1,13 +1,279 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nike</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Felipe Campos de Souza Gama — Desenvolvedor Full-Stack. Portfólio e apresentação profissional." />
+  <meta name="author" content="Felipe Campos de Souza Gama" />
+  <meta property="og:title" content="Felipe Campos de Souza Gama — Desenvolvedor Full-Stack" />
+  <meta property="og:description" content="Portfólio profissional, projetos e formas de contato." />
+  <meta property="og:type" content="website" />
+  <title>Felipe Campos de Souza Gama — Desenvolvedor Full-Stack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>" />
+</head>
+<body>
+  <!-- Fundo animado -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- Navegação -->
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav__brand">FG<span>.</span></a>
+    <nav class="nav__links">
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#skills">Skills</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato" class="nav__cta">Contato</a>
+    </nav>
+    <button class="nav__burger" id="burger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__inner">
+        <div class="hero__monogram reveal">
+          <div class="monogram">FG</div>
+          <span class="status-dot"></span>
+        </div>
+        <p class="hero__eyebrow reveal">Olá, meu nome é</p>
+        <h1 class="hero__name reveal">Felipe Campos<br />de Souza Gama</h1>
+        <h2 class="hero__role reveal">
+          <span class="typed" id="typed"></span><span class="caret">|</span>
+        </h2>
+        <p class="hero__lead reveal">
+          Desenvolvedor Full-Stack apaixonado por transformar ideias em produtos
+          digitais rápidos, acessíveis e bem desenhados. Construo do front-end ao
+          back-end com foco em qualidade e experiência do usuário.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--ghost">Fale comigo</a>
+        </div>
+        <div class="hero__stats reveal">
+          <div><strong>3+</strong><span>anos codando</span></div>
+          <div><strong>20+</strong><span>projetos</span></div>
+          <div><strong>∞</strong><span>café ☕</span></div>
+        </div>
+      </div>
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title">Sobre mim</h2>
+      </div>
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            Sou desenvolvedor full-stack baseado no Brasil 🇧🇷, com uma queda
+            especial por interfaces limpas e código bem estruturado. Comecei
+            no mundo da programação pela curiosidade de entender como as coisas
+            funcionam por trás da tela — e nunca mais parei.
+          </p>
+          <p>
+            Trabalho principalmente com o ecossistema <strong>JavaScript/TypeScript</strong>,
+            criando aplicações com <strong>React</strong> no front e <strong>Node.js</strong>
+            no back. Gosto de resolver problemas reais, escrever código que outras
+            pessoas consigam ler, e aprender uma coisa nova a cada projeto.
+          </p>
+          <p>
+            Quando não estou programando, você provavelmente vai me encontrar
+            estudando uma tecnologia nova, contribuindo em projetos open-source
+            ou tomando um café enquanto desenho a próxima ideia.
+          </p>
+          <ul class="about__tags">
+            <li>🚀 Performance</li>
+            <li>🎨 UI/UX</li>
+            <li>♿ Acessibilidade</li>
+            <li>🧩 Clean Code</li>
+          </ul>
+        </div>
+        <aside class="about__card reveal">
+          <div class="card-row"><span>📍 Localização</span><strong>Brasil</strong></div>
+          <div class="card-row"><span>💼 Disponibilidade</span><strong class="ok">Aberto a projetos</strong></div>
+          <div class="card-row"><span>🗣️ Idiomas</span><strong>PT-BR · Inglês</strong></div>
+          <div class="card-row"><span>🎯 Foco</span><strong>Full-Stack Web</strong></div>
+          <div class="card-row"><span>⚡ Stack favorita</span><strong>React + Node</strong></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPERIÊNCIA -->
+    <section class="section" id="experiencia">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Experiência & Formação</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-date">2024 — Presente</span>
+            <h3>Desenvolvedor Full-Stack</h3>
+            <p class="tl-org">Freelancer / Projetos próprios</p>
+            <p>
+              Desenvolvimento de aplicações web completas para clientes e
+              estudos pessoais, usando React, TailwindCSS e Node.js. Foco em
+              interfaces responsivas e código sustentável.
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-date">2023 — 2024</span>
+            <h3>Desenvolvedor Front-End Jr.</h3>
+            <p class="tl-org">Estúdio Digital · Estágio</p>
+            <p>
+              Implementação de landing pages e componentes reutilizáveis,
+              colaboração com designers e melhoria de performance de páginas
+              em produção.
+            </p>
+          </div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-date">2022 — 2026</span>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p class="tl-org">Faculdade de Tecnologia</p>
+            <p>
+              Graduação com foco em desenvolvimento de software, banco de dados,
+              algoritmos e engenharia de aplicações web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Habilidades</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group reveal">
+          <h3>Front-End</h3>
+          <ul>
+            <li>React</li><li>JavaScript</li><li>TypeScript</li>
+            <li>HTML5</li><li>CSS3</li><li>TailwindCSS</li><li>Vite</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Back-End</h3>
+          <ul>
+            <li>Node.js</li><li>Express</li><li>REST APIs</li>
+            <li>PostgreSQL</li><li>MongoDB</li><li>Prisma</li>
+          </ul>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Ferramentas</h3>
+          <ul>
+            <li>Git & GitHub</li><li>Docker</li><li>Figma</li>
+            <li>Vercel</li><li>Render</li><li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Projetos em destaque</h2>
+      </div>
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project__top">
+            <span class="project__icon">🛍️</span>
+            <div class="project__links">
+              <a href="#" aria-label="Repositório">↗</a>
+            </div>
+          </div>
+          <h3>Nike Landing Page</h3>
+          <p>
+            Landing page moderna e totalmente responsiva construída com React,
+            Vite e TailwindCSS, com foco em performance e design fiel ao layout.
+          </p>
+          <ul class="project__stack">
+            <li>React</li><li>Vite</li><li>Tailwind</li>
+          </ul>
+        </article>
+        <article class="project reveal">
+          <div class="project__top">
+            <span class="project__icon">📊</span>
+            <div class="project__links">
+              <a href="#" aria-label="Repositório">↗</a>
+            </div>
+          </div>
+          <h3>Dashboard Analytics</h3>
+          <p>
+            Painel de métricas com gráficos interativos, autenticação e API
+            própria em Node.js + PostgreSQL para visualização de dados em tempo real.
+          </p>
+          <ul class="project__stack">
+            <li>Node.js</li><li>React</li><li>PostgreSQL</li>
+          </ul>
+        </article>
+        <article class="project reveal">
+          <div class="project__top">
+            <span class="project__icon">✅</span>
+            <div class="project__links">
+              <a href="#" aria-label="Repositório">↗</a>
+            </div>
+          </div>
+          <h3>TaskFlow</h3>
+          <p>
+            Aplicativo de produtividade estilo Kanban com arrastar-e-soltar,
+            modo escuro e sincronização, pensado para organizar o dia a dia.
+          </p>
+          <ul class="project__stack">
+            <li>TypeScript</li><li>React</li><li>Prisma</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--contact" id="contato">
+      <div class="contact reveal">
+        <span class="section__num">05</span>
+        <h2 class="contact__title">Vamos construir algo juntos?</h2>
+        <p class="contact__lead">
+          Estou aberto a oportunidades, parcerias e projetos freelance.
+          Mande uma mensagem — respondo rápido!
+        </p>
+        <a href="mailto:filpsk77@gmail.com" class="btn btn--primary btn--lg">
+          ✉️ filpsk77@gmail.com
+        </a>
+        <div class="contact__social">
+          <a href="https://www.linkedin.com/in/felipe-campos-de-souza-gama-41a149257/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/nelep-e" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Felipe Campos de Souza Gama · Feito com 💜 e código.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>

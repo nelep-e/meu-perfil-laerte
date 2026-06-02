@@ -1,0 +1,19 @@
+# Blueprint do Render — Site Estático
+# Deploy automático: no painel do Render, "New +" > "Blueprint" e aponte para este repositório.
+services:
+  - type: web
+    name: felipe-perfil
+    runtime: static
+    # Não há etapa de build: o site é HTML/CSS/JS puro.
+    buildCommand: "echo 'Site estático — sem build necessário'"
+    # Os arquivos a servir estão na raiz do repositório.
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
